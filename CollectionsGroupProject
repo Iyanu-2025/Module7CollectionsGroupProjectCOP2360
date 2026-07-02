@@ -112,3 +112,21 @@ namespace Module7Assignment
                         myDictionary = myDictionary.OrderBy(k => k.Key).ToDictionary(k => k.Key, v => v.Value);
                         Console.WriteLine("Dictionary keys have been sorted alphabetically.");
                         break;
+
+                    case "7":
+                        //Exit the program
+                        continueRunning = false;
+                        Console.WriteLine("Exiting program...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice. Please enter a number between 1 and 7");
+                        break;
+                    }
+            }
+        }
+    }
+}
+
+
+
