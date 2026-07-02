@@ -76,12 +76,12 @@ namespace Module7Assignment
                         // Add a New Key and Value
                         Console.Write("Enter new key: ");
                         string NewKey = Console.ReadLine();
-                        if (!myDictionary.ContainsKey(newKey))
+                        if (!myDictionary.ContainsKey(NewKey))
                         {
                             Console.Write("Enter initial value: ");
-                            string.newValue = Console.ReadLine();
-                            myDictionary.Add(newKey, new List<string> { newValue });
-                            Console.WriteLine($"Added key '{newkey}' with value '{newValue}'.");
+                            string newValue = Console.ReadLine();
+                            myDictionary.Add(NewKey, new List<string> { newValue });
+                            Console.WriteLine($"Added key '{NewKey}' with value '{newValue}'.");
                         }
                         else
                         {
