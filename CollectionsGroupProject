@@ -1,1 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Module7Assignment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Initialize the dictionary with a list of string keys and string values
+            Dictionary<string, List<string>> myDictionary = new Dictionary<string, List<string>>();
+            bool continueRunning = true;
+
+            while (continueRunning)
+            {
+                //Displaying the options for the user
+                Console.WriteLine("\n--- Dictionary Menu ---");
 
