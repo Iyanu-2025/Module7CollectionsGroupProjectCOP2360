@@ -28,4 +28,32 @@ namespace Module7Assignment
                 string choice = Console.ReadLine();
 
                 //Switch statement to handle menu options
+                switch (choice)
+                {
+                    case "1":
+                        // Populate Dictionary
+                        myDictionary.Add("Fruits", new List<string> { "Apple", "Banana" });
+                        myDictionary.Add("Vehicles", new List<string> { "Car", "Bike" });
+                        Console.WriteLine("Dictionary populated with initial data.");
+                        break;
 
+                    case "2":
+                        // Display dictionary contents using enumeration (foreach KeyValuePair)
+                        Console.WriteLine("\nDictionary Contents:");
+                        if (myDictionary.Count == 0)
+                        {
+                            Console.WriteLine("The dictionary is empty.");
+                        }
+                        else
+                        {
+                            // KeyValuePair enumeration
+                            foreach (KeyValuePair<string, List<string>> kvp in myDictionary)
+                            {
+                                Console.WriteLine($"Key: {kvp.Key}");
+                                foreach (string val in kvp.Value)
+                                {
+                                    Console.WriteLine($"  - {val}");
+                                }
+                            }
+                        }
+                        break;
