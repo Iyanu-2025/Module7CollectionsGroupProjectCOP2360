@@ -72,8 +72,23 @@ namespace Module7Assignment
                         }
                         break;
 
-                   //case 4 here
-
+                   case "4":
+                        // Add a New Key and Value
+                        Console.Write("Enter new key: ");
+                        string NewKey = Console.ReadLine();
+                        if (!myDictionary.ContainsKey(newKey))
+                        {
+                            Console.Write("Enter initial value: ");
+                            string.newValue = Console.ReadLine();
+                            myDictionary.Add(newKey, new List<string> { newValue });
+                            Console.WriteLine($"Added key '{newkey}' with value '{newValue}'.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Key already exists. Use option 5 to add to existing.");
+                        }
+                        break;
+            
                     case "5":
                         Console.Write("Enter existing key: ");
                         string existingKey = Console.ReadLine();
@@ -92,3 +107,8 @@ namespace Module7Assignment
                         break;
 
                     case "6":
+                        // Sort the Keys
+                        // Ordering the dictionary by keys and recreating a new dictionary
+                        myDictionary = myDictionary.OrderBy(k => k.Key).ToDictionary(k => k.Key, v => v.Value);
+                        Console.WriteLine("Dictionary keys have been sorted alphabetically.");
+                        break;
